@@ -1,0 +1,112 @@
+.container-fluid {
+
+gap: 20%;
+
+}
+
+
+.logo {
+
+width: 1%;
+
+}
+
+.t {
+
+color: black;
+
+}
+
+section {
+
+margin-top: 10%;
+padding: 5%;
+
+}
+.car {
+
+border: solid black;
+background-color: rgba(192, 2, 2, 0.938);
+
+}
+
+.img {
+
+width: 70%;
+margin-left: 16%;
+height: 500px;
+
+}
+
+footer {
+
+background-color: white;
+color: black;
+margin-top: 70%;
+display: flex;
+flex-wrap: wrap;
+gap: 45%;
+height: 50px;
+padding: 2%;
+
+}
+
+@media(max-width: 768px){
+
+.img {
+
+width: 70%;
+margin-left: 16%;
+height: 250px;
+
+}
+
+footer {
+
+background-color: white;
+color: black;
+margin-top: 70%;
+display: flex;
+flex-wrap: wrap;
+gap: 36%;
+height: 50px;
+padding: 2%;
+
+}
+
+}
+
+@media(max-width: 456px){
+
+footer {
+
+background-color: white;
+color: black;
+margin-top: 70%;
+display: flex;
+flex-wrap: wrap;
+gap: 33%;
+height: 50px;
+padding: 2%;
+
+}
+
+}
+
+@media(max-width: 375px){
+
+footer {
+
+background-color: white;
+color: black;
+margin-top: 70%;
+display: flex;
+flex-wrap: wrap;
+gap: 27%;
+height: 50px;
+padding: 2%;
+
+}
+
+
+}

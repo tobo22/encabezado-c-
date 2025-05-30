@@ -1,0 +1,22 @@
+body {
+
+background-color:  rgba(192, 2, 2, 0.938);
+color: aliceblue
+
+}
+
+.t {
+
+color: black;
+
+}
+
+section {
+
+background-color: #8C0303;
+margin-left: 14%;
+padding: 2%;
+flex-wrap: wrap;
+width: 70%;
+
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="FH.css">
+</head>
+<body>
+
+<h1 class="t">Ayuda Funcional para Embarcadero Dev-C++</h1>
+
+<p>Esta página resume las funcionalidades clave de Embarcadero Dev-C++ para la edición, compilación, depuración y análisis de rendimiento de archivos y proyectos.</p>
+
+<hr>
+
+<h2 class="t">Edición de Archivos</h2>
+<p>La edición es sencilla: crea (Ctrl+N) o abre (Ctrl+O) un archivo.</p>
+<ul>
+  <li>Pasa el ratón sobre una variable o línea de inclusión para ver información.</li>
+  <li>Haz clic en un número de línea para poner un punto de interrupción.</li>
+  <li>Haz triple clic en una línea para seleccionarla.</li>
+  <li>La autocompletado de código se abre con Ctrl+Espacio. Puedes personalizarla en Herramientas >> Opciones del Editor >> Completado >> Autocompletado de Código.</li>
+  <li>La autocompletado de símbolos se personaliza en Herramientas >> Opciones del Editor >> Completado >> Autocompletado de Símbolos.</li>
+  <li>Considera cachear archivos incluidos frecuentemente para acelerar la apertura de archivos y proyectos.</li>
+</ul>
+
+<hr>
+
+<h2 class="t">Compilación de Archivos Fuente</h2>
+<p>Embarcadero Dev-C++ permite compilar y ejecutar archivos fuente individuales:</p>
+<ol>
+  <li>Crea (Ctrl+N) o abre (Ctrl+O) un archivo fuente.</li>
+  <li>Haz clic en Compilar (F9).</li>
+  <li>Opcionalmente, ejecuta el programa creado (F10).</li>
+</ol>
+<p>Esta compilación usa el compilador configurado en Herramientas >> Opciones del Compilador.</p>
+
+<hr>
+
+<h2 class="t">Compilación de Proyectos</h2>
+<p>Compilar un proyecto es similar:</p>
+<ol>
+  <li>Crea (Ctrl+N) o abre (Ctrl+O) un proyecto.</li>
+  <li>Haz clic en Compilar (F9) para aplicar cambios en archivos fuente.</li>
+  <li>Haz clic en Recompilar (F12) para aplicar cambios en archivos de cabecera o recompilar todo.</li>
+  <li>Opcionalmente, ejecuta el programa creado (F10).</li>
+</ol>
+<p>Usa el compilador de Herramientas >> Opciones del Compilador, pero con las configuraciones específicas del proyecto en Proyecto >> Opciones del Proyecto >> Compilador.</p>
+
+<h3 class="t">Consejos de Compilación:</h3>
+<ul>
+  <li>Para compilaciones de un solo archivo, usa extensiones correctas (*.c para C, *.cpp para C++).</li>
+  <li>Para reducir el tamaño del ejecutable, usa la bandera -s (Configuración >> Enlazador >> Eliminar ejecutable). Ten en cuenta que esto desactiva la depuración y el perfilado.</li>
+  <li>Reduce el tiempo de compilación incluyendo menos archivos.</li>
+  <li>Usa Compilar y Ejecutar (F11) para compilar y ejecutar inmediatamente.</li>
+  <li>Cuando cambies un archivo de cabecera, siempre recompila los archivos fuente que lo usan para evitar comportamientos indefinidos.</li>
+</ul>
+
+<hr>
+
+<h2 class="t">Depuración de Archivos Fuente y Proyectos</h2>
+<p>Para depurar, sigue estos pasos:</p>
+<ol>
+  <li>Crea (Ctrl+N) o abre (Ctrl+O) un archivo o proyecto.</li>
+  <li>En archivos fuente, selecciona un compilador que soporte depuración (-g3) en Herramientas >> Opciones del Compilador. Para proyectos, hazlo en Proyecto >> Opciones del Proyecto >> Compilador.</li>
+  <li>Haz clic en Depurar (F5).</li>
+  <li>Coloca un punto de interrupción haciendo clic en un número de línea o usa F4 para pausar el programa.</li>
+</ol>
+
+<h3 class="t">Consejos de Depuración:</h3>
+<ul>
+  <li>Cuando cambies de compilador, recompila antes de depurar.</li>
+  <li>La optimización (-Ox) puede alterar el orden de ejecución. Considera depurar sin optimización o usa -Og.</li>
+  <li>La información de depuración aumenta el tiempo y tamaño de compilación; puedes desactivarla para acelerar y reducir el tamaño del archivo.</li>
+  <li>La bandera -s (strip) elimina la información de depuración, así que desactívala si estás depurando.</li>
+</ul>
+
+<hr>
+
+<h2 class="t">Análisis de Rendimiento (Profiling) de Archivos Fuente y Proyectos</h2>
+<p>Para perfilar tu código:</p>
+<ol>
+  <li>Crea (Ctrl+N) o abre (Ctrl+O) un archivo o proyecto.</li>
+  <li>En archivos fuente, selecciona un compilador que soporte perfilado (-pg) en Herramientas >> Opciones del Compilador. Para proyectos, hazlo en Proyecto >> Opciones del Proyecto >> Compilador.</li>
+  <li>Haz clic en Análisis de Perfil (junto al botón de Depurar).</li>
+  <li>Al cerrar el programa, se abrirá un análisis de tiempos.</li>
+</ol>
+
+<h3 class="t">Consejos de Profiling:</h3>
+<ul>
+  <li>Solo las funciones que consumen más de 0.01 segundos de CPU aparecerán en el análisis.</li>
+  <li>Recompila antes de perfilar si cambias de compilador.</li>
+  <li>La optimización (-Ox) puede eliminar código. Asegúrate de que las funciones que quieres perfilar tengan un impacto discernible (por ejemplo, imprime un resultado para que el compilador no las optimice).</li>
+  <li>La bandera -s (strip) elimina la información de perfilado, así que desactívala si estás perfilando.</li>
+</ul>
+
+</body>
+</html>
